@@ -1,11 +1,9 @@
 #!/bin/bash
-# Setup script to ensure all expected files and logs exist for the lab
 
 # Create extract_files directory if needed
 mkdir -p /home/ubuntu/zeek_analysis/extract_files
 cd /home/ubuntu/zeek_analysis
 
-# Only create files.log if it doesn't exist
 if [ ! -f files.log ]; then
 cat > files.log << 'FILESLOG'
 #separator \x09
